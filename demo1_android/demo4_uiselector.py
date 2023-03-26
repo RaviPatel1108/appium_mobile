@@ -17,6 +17,7 @@ class AppiumConfig:
         yield
         self.driver.quit()
 
+
 class TestLogin(AppiumConfig):
     def test_invalid_login(self):
         self.driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'UiSelector().text("Dismiss")').click()
